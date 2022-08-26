@@ -1,0 +1,103 @@
+<html>
+    <!--Code by Amjad
+       contact at amjadsibilikt@gmail.com
+         or call 8891510753-->
+         <body bgcolor="black">
+         
+            <style type="text/css">
+                
+
+                .inp {
+                    color:blue;
+                    background:black;
+                }
+                .inp:hover {
+                    color:blue;
+                    font-size:larger;
+                    border-style:inset;
+                    border-color:red;
+                }
+                .bt {
+                    background:black;
+                    border-style:groove;
+                    border-color:green;
+                    color:green;
+                }
+                .bt:hover {
+                    color:red;
+                }
+            </style>
+            <script language="javascript">
+            alert("Programmed by Amjad sibili k.t\nfeedback : amjadsibilikt@gmail.com\nOr for more programs , call 8891510753");
+            
+            function getavg(){
+               
+               var resp=window.confirm("Do you want to calculate the average marks ?");
+               if(resp==true)
+               {
+                  var sum_sc=parseInt(sc_zoo.value)+parseInt(sc_bot.value)+parseInt(sc_phy.value)+parseInt(sc_chem.value);
+                  var sum_other=parseInt(eng.value)+parseInt(math.value)+parseInt(lang.value);
+                  var ttl_sum=parseInt(sum_sc)+parseInt(sum_other);
+                  var ttl=parseInt(a.value)+parseInt(b.value)+parseInt(c.value)+parseInt(d.value)+parseInt(e.value)+parseInt(f.value)+parseInt(g.value);
+                  var avg_sc=parseInt(sum_sc*100)/(parseInt(a.value)+parseInt(b.value)+parseInt(c.value)+parseInt(d.value));
+                  var sum=sum_other+sum_sc;
+                  var ttl_avg=(sum*100)/ttl;
+                  scavg.value=avg_sc+" %";
+                  ttlavg.value=ttl_avg+" %";
+               }
+               else
+               {
+                  alert("Calculating averages cancelled.");
+               }
+            }
+            function clr() {
+               a.value="";
+                b.value="";
+                 c.value="";
+                  d.value="";
+                   e.value="";
+                    f.value="";
+                     g.value="";
+                      sc_zoo.value="";
+                       sc_bot.value="";
+                         sc_phy.value="";
+                          sc_chem.value="";
+                           math.value="";
+                            lang.value="";
+                             eng.value="";
+                             scavg="";
+                             ttlavg="";
+                            
+            }
+            </script>
+            <font color="green"><center>
+                <u>ENTER MARKS AND MAXIMUM MARKS FOR THE FOLLOWING : </u><pre>
+                
+                ZOOLOGY : <input type=text class=inp name=sc_zoo>MAXIMUM :<input type=text class=inp name=a><br><br><br>
+                
+                BOTANY :  <input type=text class=inp name=sc_bot>MAXIMUM :<input type=text class=inp name=b><br><br><br>
+                
+                PHYSICS :  <input type=text class=inp name=sc_phy>MAXIMUM :<input type=text class=inp name=c><br><br><br>
+                
+                CHEMISTRY :  <input type=text class=inp name=sc_chem>MAXIMUM :<input type=text class=inp name=d><br><br><br>
+                
+                MATHAMATICS : <input type=text class=inp name=math>MAXIMUM :<input type=text class=inp name=e><br><br><br>
+                
+                ENGLISH : <input type=text class=inp name=eng>MAXIMUM :<input type=text class=inp name=f><br><br><br>
+                
+                LANGUAGE : <input type=text class=inp name=lang>MAXIMUM :<input type=text class=inp name=g><br><br><br>
+                
+                <input type=button value="GET RESULTS !!!" onclick=getavg() class=bt><br> 
+                    <input type=button value="CLEAR VALUES" onlclick=clr() class=bt><hr/>
+                    
+                   AVERAGE IN SCIENCE : <input type=text class=inp name=scavg><br>
+                   PROGRESS : <progress value="55" max="100"></progress>
+                   
+                   AVERAGE IN TOTAL SUBJECTS : <input type=text class=inp name=ttlavg><br>
+                   PROGRESS : <progress value="javascript:parseInt(ttlavg.value);" max="100"></progress>
+                   <hr/><hr/><hr/>
+                   
+            </font>
+            <center></pre>
+         </body>
+</html>
